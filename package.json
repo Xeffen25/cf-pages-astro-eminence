@@ -1,5 +1,5 @@
 {
-	"name": "cf-pages-astro-starter",
+	"name": "cf-pages-astro-eminence",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
@@ -18,7 +18,10 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20241106.0",
+		"@csstools/postcss-global-data": "^3.0.0",
+		"cssnano": "^7.0.6",
 		"husky": "^9.1.6",
+		"level4": "^1.0.1",
 		"lint-staged": "^15.2.10",
 		"prettier": "^3.3.3",
 		"prettier-plugin-astro": "^0.14.1",
