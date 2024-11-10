@@ -1,0 +1,21 @@
+---
+interface Props {
+	title: string;
+	description: string;
+}
+
+import "~/styles/global/global.css";
+---
+
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{Astro.props.title}</title>
+		<meta name="description" content={Astro.props.description} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

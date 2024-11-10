@@ -1,16 +1,16 @@
 ---
-
+import Layout from "~/layouts/layout.astro";
+import Card from "~/components/card.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout
+	title="Plantilla Eminence de Astro para Cloudflare Pages por Xeffen25"
+	description="Plantilla de Inicio de Astro para Cloudflare Pages con: PostCSS configurado, estilos, SEO integrado... Diseñada por Xeffen25 para webs rápidas y responsivas."
+>
+	<section>
+		<h1>Plantilla de Astro para Cloudflare Pages: <span>EMINENCE</span></h1>
+		<p>Configuración completada y optimizada para que solo tengas que programar.</p>
+		<a>Comenzar ahora</a>
+		<button>npm create cloudflare@latest --framework=astro --template=Xeffen25/cf-pages-astro-eminece</button>
+	</section>
+</Layout>
