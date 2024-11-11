@@ -1,0 +1,6 @@
+:root {
+	/* first of all the variables related to fonts */
+	--font-heading-family: "Orbitron", serif;
+
+	--font-body-family: "Roboto Mono", serif;
+}

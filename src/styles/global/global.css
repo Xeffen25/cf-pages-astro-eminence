@@ -1,1 +1,4 @@
+@import "./font-faces.css";
+@import "./variables.css";
 @import "./reset.css";
+@import "./font-styles.css";

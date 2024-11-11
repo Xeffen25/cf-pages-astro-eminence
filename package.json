@@ -29,6 +29,6 @@
 		"wrangler": "^3.86.0"
 	},
 	"lint-staged": {
-		"*": "prettier --write"
+		"*{js,jsx,ts,tsx,css,md,mdx,json,astro}": "prettier --write"
 	}
 }

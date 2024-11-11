@@ -1,0 +1,58 @@
+html {
+	font-family: var(--font-body-family);
+	/* If font is set to default of 16px, 1 rem will be equal to 1px making it easier to use. */
+	font-size: 6.25%;
+	/* Line Height for accessibility, adjust depending on font used */
+	line-height: 1.25;
+}
+
+.h,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-heading-family);
+	/* Better text wrapping */
+	text-wrap: balance;
+	/* Line Height for accessibility, adjust depending on font used */
+	line-height: 1.1;
+}
+
+h1,
+.h1 {
+	font-size: 72rem;
+}
+
+h2,
+.h2 {
+	font-size: 48rem;
+}
+
+h3,
+.h3 {
+	font-size: 36rem;
+}
+
+h4,
+.h4 {
+	font-size: 30rem;
+}
+
+h5,
+.h5 {
+	font-size: 24rem;
+}
+
+h6,
+.h6 {
+	font-size: 20rem;
+}
+
+.p,
+p {
+	/* Better text wrapping */
+	text-wrap: pretty;
+	font-size: 16rem;
+}
