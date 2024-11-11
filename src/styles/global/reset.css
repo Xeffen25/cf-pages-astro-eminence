@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	/* Prevent grid and flex items from spilling  out of their container. */
+	min-width: 0;
+}
+
+body {
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+figure {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
