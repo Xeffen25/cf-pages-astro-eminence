@@ -1,0 +1,17 @@
+html {
+	background: var(--color-background);
+}
+
+.h,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-heading);
+}
+.p,
+p {
+	color: var(--color-text);
+}
