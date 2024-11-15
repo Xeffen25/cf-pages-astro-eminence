@@ -12,6 +12,7 @@ h6 {
 	color: var(--color-heading);
 }
 .p,
-p {
+p,
+a {
 	color: var(--color-text);
 }

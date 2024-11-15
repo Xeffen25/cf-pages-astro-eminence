@@ -7,12 +7,95 @@ import Card from "~/components/card.astro";
 	title="Plantilla Eminence de Astro para Cloudflare Pages por Xeffen25"
 	description="Plantilla de Inicio de Astro para Cloudflare Pages con: PostCSS configurado, estilos, SEO integrado... Diseñada por Xeffen25 para webs rápidas y responsivas."
 >
-	<section>
-		<h1>Plantilla de Astro para Cloudflare Pages: <span>EMINENCE</span></h1>
+	<section class="hero">
+		<h1>
+			Plantilla de <span class="astro">Astro</span> para <span class="cloudflare">Cloudflare Pages</span>: <span
+				>EMINENCE</span
+			>
+		</h1>
 		<p>Configuración completada y optimizada para que solo tengas que programar.</p>
-		<a>Comenzar ahora</a>
-		<button>npm create cloudflare@latest --framework=astro --template=Xeffen25/cf-pages-astro-eminece</button>
+		<a class="button get-started">Comenzar ahora</a>
+		<button class="button copy-to-clipboard">
+			<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M5 2 L15 12 L5 22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+			</svg>
+			npm create cloudflare@latest --framework=astro --template=Xeffen25/cf-pages-astro-eminece
+			<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					fill-rule="evenodd"
+					clip-rule="evenodd"
+					stroke="currentColor"
+					d="M19.5 16.5L19.5 4.5L18.75 3.75H9L8.25 4.5L8.25 7.5L5.25 7.5L4.5 8.25V20.25L5.25 21H15L15.75 20.25V17.25H18.75L19.5 16.5ZM15.75 15.75L15.75 8.25L15 7.5L9.75 7.5V5.25L18 5.25V15.75H15.75ZM6 9L14.25 9L14.25 19.5L6 19.5L6 9Z"
+				>
+				</path>
+			</svg>
+		</button>
 	</section>
+	<style>
+		:root {
+			--s: 5px;
+		}
+		.astro {
+			background: linear-gradient(80deg, #3245ff, #b845ed);
+			background-clip: text;
+			color: transparent;
+		}
+		.cloudflare {
+			color: #f6821f;
+		}
+		h1 {
+			text-align: center;
+		}
+		.hero {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.get-started {
+			font-size: 20rem;
+			position: relative;
+			color: #fffe;
+			background: linear-gradient(80deg, #3245ff, #b845ed);
+			border-radius: 99rem;
+			padding: 1em 2em;
+			transition: scale 0.3s ease-in-out;
+		}
+		.get-started:before {
+			content: "";
+			position: absolute;
+			inset: 0rem;
+			z-index: -1;
+			background: linear-gradient(80deg, #3245ff, #b845ed);
+			filter: blur(7rem);
+			border-radius: inherit;
+		}
+		.get-started:hover {
+			scale: 1.05;
+		}
+		.copy-to-clipboard {
+			transition: all 0.3s ease-in-out;
+			display: grid;
+			grid-template-columns: 1fr auto;
+			text-wrap: pretty;
+			text-align: left;
+			font-weight: normal;
+			background: #0005;
+			padding: 1em 2em;
+			color: #fff;
+		}
+		.copy-to-clipboard svg {
+			transition: all 0.3s ease-in-out;
+			stroke-width: 1.5;
+			height: 1em;
+			width: auto;
+		}
+		.copy-to-clipboard:hover {
+			font-weight: bold;
+		}
+		.copy-to-clipboard:hover svg {
+			stroke-width: 3;
+		}
+	</style>
 	<section>
 		<h2>¿Por qué elegir la plantilla Eminence?</h2>
 		<ul>
