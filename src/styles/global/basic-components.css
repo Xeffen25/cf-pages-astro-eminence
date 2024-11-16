@@ -3,6 +3,7 @@ button,
 	cursor: pointer;
 	font-size: 16rem;
 	font-weight: bold;
+	text-decoration: none;
 	background: var(--color-text);
 	color: var(--color-background);
 	padding: 0.5em;

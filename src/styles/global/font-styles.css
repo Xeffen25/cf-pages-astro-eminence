@@ -57,6 +57,7 @@ p {
 	font-size: 16rem;
 }
 a,
+code,
 button {
 	font-size: 16rem;
 	font-family: var(--font-body-family);
