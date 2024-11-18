@@ -9,82 +9,102 @@ import IconCopy from "~/components/icons/copy.astro";
 	description="Plantilla de Inicio de Astro para Cloudflare Pages con: PostCSS configurado, estilos, SEO integrado... Diseñada por Xeffen25 para webs rápidas y responsivas."
 >
 	<section class="hero">
-		<h1>
-			Plantilla de <span class="astro">Astro</span> para <span class="cloudflare">Cloudflare Pages</span>: <span
-				>EMINENCE</span
-			>
+		<h1 class="hero__title">
+			Plantilla de
+			<span class="hero__title-astro">Astro</span> para
+			<span class="hero__title-cloudflare">Cloudflare Pages</span>: EMINENCE
 		</h1>
-		<p>Configuración completada y optimizada para que solo tengas que programar.</p>
-		<a class="button get-started" href="/comenzar-ahora/">Comenzar ahora</a>
-		<button class="button copy-to-clipboard">
-			<code>&gt npm create cloudflare@latest --framework=astro --template=Xeffen25/cf-pages-astro-eminece</code>
-			<IconCopy />
+		<p class="hero__subtitle">Configuración completada y optimizada para que solo tengas que programar.</p>
+		<a href="/comenzar-ahora/" class="hero__link button hover-scale">Comenzar ahora</a>
+		<button class="hero__button">
+			<code class="hero__button-code"
+				>npm create cloudflare --framework=astro --template=Xeffen25/cf-pages-astro-theme-eminence</code
+			>
+			<span class="hero__button-icon" aria-hidden="true">📋</span>
+			<span class="hero__button-tooltip">¡Copiado!</span>
 		</button>
 	</section>
+
 	<style>
 		:root {
-			--s: 5px;
-		}
-		.astro {
-			background: linear-gradient(80deg, #3245ff, #b845ed);
-			background-clip: text;
-			color: transparent;
-		}
-		.cloudflare {
-			color: #f6821f;
-		}
-		h1 {
-			text-align: center;
+			--astro-background: linear-gradient(80deg, #3245ff, #b845ed);
 		}
 		.hero {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 		}
-		.get-started {
-			font-size: 20rem;
+		.hero__title {
+			text-align: center;
+			font-size: 36rem;
+		}
+		.hero__title-astro {
+			background: var(--astro-background);
+			background-clip: text;
+			color: transparent;
+		}
+		.hero__title-cloudflare {
+			color: #f6821f;
+		}
+		.hero__link {
 			position: relative;
+			background: var(--astro-background);
 			color: #fffe;
-			background: linear-gradient(80deg, #3245ff, #b845ed);
-			border-radius: 99rem;
+			border-radius: 999px;
 			padding: 1em 2em;
-			transition: scale 0.3s ease-in-out;
 			margin: 1em;
 		}
-		.get-started:before {
+		.hero__link:before {
 			content: "";
 			position: absolute;
 			inset: 0rem;
 			z-index: -1;
-			background: linear-gradient(80deg, #3245ff, #b845ed);
+			background: var(--astro-background);
 			filter: blur(7rem);
 			border-radius: inherit;
 		}
-		.get-started:hover {
-			scale: 1.05;
-		}
-		.copy-to-clipboard {
-			transition: all 0.3s ease-in-out;
-			text-wrap: pretty;
-			text-align: left;
-			font-weight: normal;
+		.hero__button {
 			background: #0005;
-			padding: 1em 2em;
 			color: #fff;
-		}
-		.copy-to-clipboard :global(svg) {
+			font-weight: normal;
 			transition: all 0.3s ease-in-out;
-			stroke-width: 1.5;
-			height: 1em;
-			width: auto;
+			text-align: left;
+			margin: 0;
+			padding: 1em 2em;
+			position: relative;
 		}
-		.copy-to-clipboard:hover {
-			font-weight: bold;
+		.hero__button:hover {
+			background: #0008;
 		}
-		.copy-to-clipboard:hover :global(svg) {
-			stroke-width: 2;
+		.hero__button-tooltip {
+			position: absolute;
+			top: 90%;
+			left: 0;
+			right: 0;
+			text-align: center;
+			z-index: -1;
+			opacity: 0;
+			font-weight: normal;
+			transition: all 0.3s ease-in-out;
+		}
+		.hero__button:is(.open) .hero__button-tooltip {
+			top: 100%;
+			opacity: 1;
 		}
 	</style>
+	<script>
+		const button = document.querySelector(".hero__button");
+		button?.addEventListener("click", () => {
+			const code = button.querySelector(".hero__button-code")?.textContent;
+			if (code) {
+				navigator.clipboard.writeText(code);
+				button.classList.add("open");
+				setTimeout(() => {
+					button.classList.remove("open");
+				}, 1500);
+			}
+		});
+	</script>
 	<section>
 		<h2>¿Por qué elegir la plantilla Eminence?</h2>
 		<ul>
