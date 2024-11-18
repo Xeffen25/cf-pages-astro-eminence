@@ -2,7 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 .page-width {
-	max-width: max(--page-width, 90%);
+	max-width: min(var(--page-width), 90%);
 }
