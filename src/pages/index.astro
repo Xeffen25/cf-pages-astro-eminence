@@ -7,14 +7,14 @@ import Card from "~/components/card.astro";
 	title="Plantilla Eminence de Astro para Cloudflare Pages por Xeffen25"
 	description="Plantilla de Inicio de Astro para Cloudflare Pages con: PostCSS configurado, estilos, SEO integrado... Diseñada por Xeffen25 para webs rápidas y responsivas."
 >
-	<section class="hero page-width">
+	<section class="hero page-width section">
 		<h1 class="hero__title">
 			Plantilla de
 			<span class="hero__title-astro">Astro</span> para
 			<span class="hero__title-cloudflare">Cloudflare Pages</span>: EMINENCE
 		</h1>
 		<p class="hero__subtitle">Configuración completada y optimizada para que solo tengas que programar.</p>
-		<a href="/comenzar-ahora/" class="hero__link button hover-scale">Comenzar ahora</a>
+
 		<button class="hero__button">
 			<code class="hero__button-code"
 				>npm create cloudflare --framework=astro --template=Xeffen25/cf-pages-astro-theme-eminence</code
@@ -22,6 +22,7 @@ import Card from "~/components/card.astro";
 			<span class="hero__button-icon" aria-hidden="true">📋</span>
 			<span class="hero__button-tooltip">¡Copiado!</span>
 		</button>
+		<a href="/comenzar-ahora/" class="hero__link button hover-scale">Comenzar ahora</a>
 	</section>
 
 	<style>
@@ -81,7 +82,7 @@ import Card from "~/components/card.astro";
 			left: 0;
 			right: 0;
 			text-align: center;
-			z-index: -1;
+			z-index: 1;
 			opacity: 0;
 			font-weight: normal;
 			transition: all 0.3s ease-in-out;
@@ -104,7 +105,7 @@ import Card from "~/components/card.astro";
 			}
 		});
 	</script>
-	<section>
+	<section class="section page-width">
 		<h2>¿Por qué elegir la plantilla Eminence?</h2>
 		<ul>
 			<Card

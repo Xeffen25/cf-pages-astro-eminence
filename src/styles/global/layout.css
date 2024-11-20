@@ -7,3 +7,10 @@
 .page-width {
 	max-width: min(var(--page-width), 90%);
 }
+.page-width-padding {
+	padding-left: max(calc((100vw - var(--page-width)) / 2), 5%);
+	padding-right: max(calc((100vw - var(--page-width)) / 2), 5%);
+}
+.section + .section {
+	margin-top: var(--section-spacing);
+}

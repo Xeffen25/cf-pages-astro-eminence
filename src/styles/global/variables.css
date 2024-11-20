@@ -4,7 +4,8 @@
 
 	--font-body-family: "Roboto Mono", serif;
 	/* Page Layout */
-	--page-width: 1200px;
+	--page-width: 1000px;
+	--section-spacing: 48rem;
 
 	/* Dark Mode first Colors because that way we don't have a flash */
 	--color-background: #111;

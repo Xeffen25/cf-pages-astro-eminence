@@ -5,9 +5,11 @@ interface Props {
 }
 
 import "~/styles/global/global.css";
+
+import Header from "~/components/header.astro";
 ---
 
-<html lang="es">
+<html lang={Astro.currentLocale}>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -16,6 +18,7 @@ import "~/styles/global/global.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
 	<body>
+		<Header />
 		<main id="MainContent">
 			<slot />
 		</main>
